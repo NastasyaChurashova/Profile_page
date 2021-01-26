@@ -1,0 +1,32 @@
+/** @format */
+$base-color: #cccccc;
+
+body {
+  background: $base-color;
+}
+
+header {
+  background: url(../BG_header.jpg);
+  height: 300px;
+}
+
+main {
+  background: #ffffff;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2), 0px 2px 24px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  min-height: 400px;
+}
+
+$profile-size: 16px;
+
+.profile {
+  text-align: center;
+  font-size: $profile-size;
+  &__picture {
+    position: relative;
+    top: -70px / $profile-size em;
+    width: 160px / $profile-size em;
+    height: 160px / $profile-size em;
+  }
+}
+  
