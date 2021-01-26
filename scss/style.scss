@@ -1,15 +1,12 @@
 /** @format */
-$base-color: #cccccc;
-
+$base-color: #ccc;
 body {
   background: $base-color;
 }
-
 header {
   background: url(../BG_header.jpg);
   height: 300px;
 }
-
 main {
   background: #ffffff;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2), 0px 2px 24px rgba(0, 0, 0, 0.14);
@@ -17,16 +14,80 @@ main {
   min-height: 400px;
 }
 
-$profile-size: 16px;
+$default-size: 16;
+@function convertToEm($size, $from_px) {
+  $result: $size / $from_px;
+  @return $result + 0em;
+}
 
 .profile {
   text-align: center;
-  font-size: $profile-size;
+  font-size: 20px;
+  font-size: 16px;
+
   &__picture {
+    font-size: 100%;
     position: relative;
-    top: -70px / $profile-size em;
-    width: 160px / $profile-size em;
-    height: 160px / $profile-size em;
+    top: -70 / $default-size + 0em;
+    width: 160 / $default-size + 0em;
+    height: 160 / $default-size + 0em;
+    top: convertToEm(-70, 16);
+    width: convertToEm(160, 16);
+    height: convertToEm(160, 16);
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: convertToEm(25.55, 16);
+    line-height: convertToEm(30, 25.55);
+    color: #3c4858;
+  }
+
+  &__profession {
+    font-size: convertToEm(14, 25.55);
+    line-height: convertToEm(16, 14);
+    color: #333333;
   }
 }
-  
+
+
+.favorite_icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -10px -10px;
+}
+
+.studio_icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -60px -10px;
+}
+
+.work_icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../images/css_sprites.png") -110px -10px;
+}
+
+.gallery {
+  &__tab-nav {
+    display: flex;
+
+    a {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .profile {
+    font-size: 14px;
+    }
+  }
+
+
