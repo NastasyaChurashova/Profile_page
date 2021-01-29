@@ -10,36 +10,34 @@ body {
 .wrapper {
   margin: auto;
   max-width: 1440px;
-}
 
-header {
+  header {
   background: url(../BG_header.jpg);
-  height: 300px;
-  max-width: 1139px;
+  min-height: 381px;
+  max-width: 1440px;
   padding: 23px 24px;
   display: flex;
   justify-content: space-between;
   margin: auto;
-  }
-
   a {
     text-decoration: none;
     color: white;
     margin-right: 24px;
+    }
   }
-
-  .tim {
-    font-size: 18px;
-  }
-
- .dropdown {
-  display: none;
-  align-self: center;
 }
 
-.top-menu {
+.top-menu nav {
   display: inline-block;
   vertical-align: middle;
+  margin-right: 147px;
+  }
+
+.tim {
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 145px;
+  line-height: 21.09px;
 }
 
 #download {
@@ -47,6 +45,9 @@ header {
   padding-bottom: 2px;
 }
 
+.dropdown {
+  display: none;
+}
 
 main {
   background: #ffffff;
@@ -54,7 +55,7 @@ main {
   border-radius: 6px;
   min-height: 400px;
   padding: 17.5px 10px;
-  margin: -63px 10px 0;
+  margin: -63px 30px 0;
 }
 
 @function convertToEm($size, $from_px) {
@@ -73,7 +74,6 @@ main {
     width: convertToEm(160, 16);
     height: convertToEm(160, 16);
   }
-
   h1 {
     font-weight: 500;
     font-size: convertToEm(25.55, 16);
@@ -85,6 +85,15 @@ main {
     font-size: convertToEm(14, 25.55);
     line-height: convertToEm(16, 14);
     color: #333333;
+  }
+
+  p {
+    color: #999999;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
   }
 }
 
@@ -144,7 +153,7 @@ main {
       margin: 20px 0 20px 0;
     }
     &:hover {
-      background: rgba(200, 200, 200, 0.2);
+      background: #b8b3b3;
     }
     &:active,
     &--active {
@@ -224,15 +233,18 @@ h3 {
     max-height: 3774px;
   }
 
+  header {
+    min-height: 381px;
+  }
+
   footer {
     min-width: 500px;
   }
 
   h3 {
     margin: 0 auto;
-    align-content: flex-end; 
+    align-content: flex-end;
   }
-}
 }
 
 @media only screen and (max-width: 655px) {
@@ -248,20 +260,17 @@ h3 {
   .profile {
     font-size: 14px;
   }
-  main {
-    margin-left: 9.5px;
-    margin-right: 9.5px;
-  }
+}
 
+@media only screen and (max-width: 425px) {
   .dropdown {
     display: initial;
-    padding-top: 10px;;
   }
 
   .top-menu {
-    display: none;  
+    display: none;
     position: absolute;
-    background: #0e2f66e5;
+    background: #9c27b0;
     top: 70px;
     right: 0px;
     flex-direction: column;
@@ -272,24 +281,22 @@ h3 {
 
   header {
     height: 25px;
-}
+  }
 
   header a {
     display: flex;
     justify-content: center;
     padding: 1px 0 20px 15px;
   }
-  
+
   .dropdown:focus + nav {
     display: flex;
   }
 
   .top-menu.open {
-      display: flex;
-    }
-}
+    display: flex;
+  }
 
-@media only screen and (max-width: 425px) {
   footer {
     display: flex;
     flex-direction: column;
