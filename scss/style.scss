@@ -12,33 +12,35 @@ body {
   max-width: 1440px;
 
   header {
-  background: url(../BG_header.jpg);
-  min-height: 381px;
-  max-width: 1440px;
-  padding: 23px 24px;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  a {
-    text-decoration: none;
-    color: white;
-    margin-right: 24px;
+    background: url(../BG_header.jpg);
+    min-height: 381px;
+    max-width: 1440px;
+    padding: 36px 24px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    a {
+      text-decoration: none;
+      color: white;
+      margin-right: 24px;
     }
+    .tim {
+      font-size: 18px;
+      font-weight: 300;
+      margin-left: 145px;
+      line-height: 21.09px;
+    }
+     nav {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 147px;
+      }
   }
 }
 
-.top-menu nav {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 147px;
-  }
 
-.tim {
-  font-size: 18px;
-  font-weight: 300;
-  margin-left: 145px;
-  line-height: 21.09px;
-}
+
+
 
 #download {
   vertical-align: middle;
@@ -226,43 +228,37 @@ h3 {
   color: #000000;
 }
 
-@media only screen and (max-width: 748px) {
-  main {
-    margin-left: 9.5px;
-    margin-right: 9.5px;
-    max-height: 3774px;
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    min-height:4227px;
+  }
+    
+  header {
+      min-height: 381px;
   }
 
-  header {
-    min-height: 381px;
-  }
+  main {
+      margin-left: 9.5px;
+      margin-right: 9.5px;
+      min-height: 3774px;
+    }
 
   footer {
-    min-width: 500px;
-  }
-
-  h3 {
-    margin: 0 auto;
-    align-content: flex-end;
-  }
-}
-
-@media only screen and (max-width: 655px) {
-  .gallery__column {
-    width: 100%;
-    img {
-      width: 100%;
+      min-width: 500px;
     }
-  }
+    
+  h3 {
+      margin: 0 auto;
+      align-content: flex-end;
+    }
 }
 
-@media only screen and (max-width: 600px) {
+
+
+@media only screen and (max-width: 570px) {
   .profile {
     font-size: 14px;
   }
-}
-
-@media only screen and (max-width: 425px) {
   .dropdown {
     display: initial;
   }
@@ -279,23 +275,19 @@ h3 {
     padding-top: 15px;
   }
 
-  header {
-    height: 25px;
-  }
-
   header a {
     display: flex;
     justify-content: center;
     padding: 1px 0 20px 15px;
   }
 
-  .dropdown:focus + nav {
-    display: flex;
-  }
-
   .top-menu.open {
     display: flex;
   }
+
+}
+
+@media only screen and (max-width: 425px) {
 
   footer {
     display: flex;
