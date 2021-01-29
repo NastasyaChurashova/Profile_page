@@ -21,7 +21,7 @@
       </a>
         <nav class="top-menu">
           <a href="#icons">COMPONENTS</a>
-          <a href="#icons"><img src="download-icon.png" id="download" alt="download">
+          <a href="#icons"><img src="images/download-icon.png" id="download" alt="download">
             DOWNLOAD</a>
           <a href="#twitter">
             <svg 
@@ -69,36 +69,35 @@
         <nav class="gallery__tab-nav">
           <a class="gallery__tab" href="#" onclick="showTab.bind([event,this])(0);"><i class="studio_icon"></i><span>studio</span></a>
           <a class="gallery__tab gallery__tab--active" href="#"  onclick="showTab.bind([event,this])(1);"><i class="work_icon"></i><span>work</span></a>
-          <a class="gallery__tab" href="#"  onclick="showTab.bind([event,this])(2);"></i><span>favorite</span></a>
+          <a class="gallery__tab" href="#"  onclick="showTab.bind([event,this])(2);"><i class="favorite_icon"></i><span>favorite</span></a>
         </nav>
         <div class="gallery__photos gallery__photos--show">
           <div class="gallery__column">
-        <img src="gallery/photo1.png" alt="">
-        <img src="gallery/photo2.png" alt="">
+            <img src="gallery/photo1.png" alt="">
+            <img src="gallery/photo2.png" alt="">
           </div>
           <div class="gallery__column">
             <img src="gallery/photo3.png" alt="">
             <img src="gallery/photo4.png" alt="">
           </div>
           <div class="gallery__photos">
-            <div class="gallery__column">
-          <img src="gallery/photo1.png" alt="">
-
-            </div>
-            <div class="gallery__column">
+          <div class="gallery__column">
+              <img src="gallery/photo1.png" alt="">
+          </div>
+          <div class="gallery__column">
               <img src="gallery/photo4.png" alt="">
-            </div>
-            <div class="gallery__photos">
-              <div class="gallery__column">
-
-            <img src="gallery/photo2.png" alt="">
-              </div>
-              <div class="gallery__column">
+          </div>
+          </div>
+          <div class="gallery__photos">
+            <div class="gallery__column">
+                <img src="gallery/photo2.png" alt="">
+          </div>
+            <div class="gallery__column">
                 <img src="gallery/photo3.png" alt="">
-
-              </div>
+            </div>
         </div>
       </div>
+    </main>
       <footer>
         <nav class="bottom-menu">
           <a href="#CREATIVE_TIM">CREATIVE TIM</a>
@@ -108,7 +107,6 @@
         </nav>
         <h3>© 2016, made with <font size="4px" color="#000000"> ♥ </font> by Creative Tim</h3>       
       </footer>
-    </main>
 </div>
 
 
@@ -117,9 +115,5 @@
     document.querySelector('.gallery__tab--active').classList.remove('gallery__tab--active');
     this[0].preventDefault();
     this[1].classList.add("gallery__tab--active");
-
-    document.querySelector('.gallery__tab--active').classList.remove('gallery__tab--active');
-    document.querySelectorAll ("gallery__photos")[i].classList.add("gallery__photos--show")
-    this[1].classList.add("gallery__photos--show");
   }
 </script>
