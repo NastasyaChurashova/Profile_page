@@ -10,12 +10,13 @@ body {
 .wrapper {
   margin: auto;
   max-width: 1440px;
+  max-height: 4297px;
 
   header {
     background: url(../BG_header.jpg);
     min-height: 381px;
-    max-width: 1440px;
-    padding: 36px 24px;
+    min-width: 768px;
+    padding: 36px 0 36px 147px;
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -27,20 +28,15 @@ body {
     .tim {
       font-size: 18px;
       font-weight: 300;
-      margin-left: 145px;
       line-height: 21.09px;
     }
-     nav {
+    nav {
       display: inline-block;
       vertical-align: middle;
       margin-right: 147px;
-      }
+    }
   }
 }
-
-
-
-
 
 #download {
   vertical-align: middle;
@@ -184,7 +180,6 @@ main {
     &--show {
       display: flex;
       margin: auto;
-      display: flex;
       flex-wrap: wrap;
       justify-content: center;
       img {
@@ -208,13 +203,12 @@ footer {
   max-width: 1127px;
   padding: 23px 24px;
   margin: auto;
-}
-
-footer a {
-  text-decoration: none;
-  font-size: 12px;
-  margin-right: 24px;
-  margin-top: 40px;
+  a {
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 24px;
+    margin-top: 40px;
+  }
 }
 
 h3 {
@@ -228,32 +222,52 @@ h3 {
   color: #000000;
 }
 
+@media only screen and (max-width: 900px) {
+  header {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .wrapper {
-    min-height:4227px;
+    min-height: 4227px;
   }
-    
+
   header {
-      min-height: 381px;
+    min-height: 381px;
+    padding-left: 24px;
+    .tim {
+      margin-left: 15px;
+    }
   }
 
   main {
-      margin-left: 9.5px;
-      margin-right: 9.5px;
-      min-height: 3774px;
-    }
+    margin-left: 9.5px;
+    margin-right: 9.5px;
+    min-height: 3774px;
+    max-width: 748px;
+  }
 
   footer {
-      min-width: 500px;
-    }
-    
+    min-width: 500px;
+  }
+
   h3 {
-      margin: 0 auto;
-      align-content: flex-end;
+    margin: 0 auto;
+    align-content: flex-end;
+  }
+
+  .gallery__column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    img {
+      width: 725px;
     }
+  }
 }
-
-
 
 @media only screen and (max-width: 570px) {
   .profile {
@@ -263,7 +277,7 @@ h3 {
     display: initial;
   }
 
-  .top-menu {
+  .top-menu nav {
     display: none;
     position: absolute;
     background: #9c27b0;
@@ -284,11 +298,9 @@ h3 {
   .top-menu.open {
     display: flex;
   }
-
 }
 
 @media only screen and (max-width: 425px) {
-
   footer {
     display: flex;
     flex-direction: column;
