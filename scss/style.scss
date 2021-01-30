@@ -15,11 +15,7 @@ body {
   header {
     background: url(../BG_header.jpg);
     min-height: 381px;
-    min-width: 768px;
-    padding: 36px 0 36px 147px;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
+
     a {
       text-decoration: none;
       color: white;
@@ -30,10 +26,12 @@ body {
       font-weight: 300;
       line-height: 21.09px;
     }
-    nav {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 147px;
+    .top {
+      max-width: 1143px;
+      height: 70px;
+      padding: 36px 151px 36px 147px;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
@@ -222,23 +220,20 @@ h3 {
   color: #000000;
 }
 
-@media only screen and (max-width: 900px) {
-  header {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .wrapper {
     min-height: 4227px;
-  }
-
-  header {
-    min-height: 381px;
-    padding-left: 24px;
-    .tim {
-      margin-left: 15px;
+    header {
+      min-height: 381px;
+      .tim {
+        margin-left: 15px;
+      }
+      .top {
+        min-width: 724px;
+        background: #00000098;
+        align-items: center;
+        padding: 36px 20px 36px 24px;
+      }
     }
   }
 
@@ -251,6 +246,7 @@ h3 {
 
   footer {
     min-width: 500px;
+    max-height: 134px;
   }
 
   h3 {
@@ -269,30 +265,47 @@ h3 {
   }
 }
 
+@media only screen and (max-width: 675px) {
+  .wrapper {
+    header {
+      .top {
+        min-width: 631px;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 570px) {
   .profile {
     font-size: 14px;
   }
+
   .dropdown {
     display: initial;
   }
 
-  .top-menu nav {
-    display: none;
-    position: absolute;
-    background: #9c27b0;
-    top: 70px;
-    right: 0px;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 1;
-    padding-top: 15px;
-  }
-
-  header a {
-    display: flex;
-    justify-content: center;
-    padding: 1px 0 20px 15px;
+  .wrapper {
+    header {
+      nav {
+        display: none;
+        position: absolute;
+        background: #9c27b0;
+        top: 80px;
+        right: 0px;
+        flex-direction: column;
+        z-index: 1;
+        padding: 5px;
+        a {
+          margin: 5px;
+        }
+      }
+      .top {
+        min-width: 526px;
+        justify-content: space-around;
+      }
+    }
   }
 
   .top-menu.open {
